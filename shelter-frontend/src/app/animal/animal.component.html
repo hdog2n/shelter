@@ -1,0 +1,16 @@
+<p>animal works!</p>
+
+<div>
+    <input type="text" id="animalName" [(ngModel)]="animalToAdd.animal_name">
+    <label for="animalName">Name</label>
+
+    <br>
+    <input type="text" id="birthdate" [(ngModel)]="animalToAdd.birthdate">
+    <label for="birthdate">Birthdate</label>
+
+    <button type="button" (click)="addAnimal()">Register</button>
+
+</div>
+
+
+<button (click)="goToAnimalList()">Go to Animal List</button>
