@@ -1,0 +1,28 @@
+<p>animal-list works!</p>
+<p>{{errorMessage}}</p>
+
+<button (click)="goToAnimal()">Go To Animal</button>
+
+
+<table>
+    <thead></thead>
+        <tr>
+            <th>name</th><th>birthdate</th><th>race</th>
+        </tr>
+    <tbody>
+        @for(animal of animals | async; track $index) {
+            <tr>
+                <td>{{animal.animal_name}}</td>
+                <td>{{animal.birthdate}}</td>
+                <td>{{animal.race_name}}</td>
+                <td><button (click)="deleteChosenAnimal(animal.Id_Animal)">DELETE ANIMAL</button></td>
+                <td><button (click)="updateChosenAnimal(animal)">UPDATE  ANIMAL</button></td>
+            </tr> 
+        }
+    </tbody>
+</table>
+
+
+
+
+
